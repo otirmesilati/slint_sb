@@ -4,6 +4,8 @@ export component AppWindow inherits Window
 {
     GridLayout 
     {
+        padding: 50px;
+        spacing: 25px;
         Row
         {
             Text
@@ -19,6 +21,7 @@ export component AppWindow inherits Window
             LineEdit 
             {
                 font-size: 16px;
+                horizontal-alignment: center;
                 placeholder-text: "Enter your number";
             }
         }
@@ -35,5 +38,6 @@ export component AppWindow inherits Window
 // creating a grid layout for table like GUI
 // do 3 lines - 3 rows
 // adjust the GUI window - horizontal center alignment, make the font 24, and the font weight 900
-// Adding the text box through line edit with 16 pixels and 16 pixels
+// Adding the text box through line edit with a "enter number" request" with 16 pixels and 16 pixels, horizontal center alignment
 // Adding the button
+// padding (50) and spacing (25)
