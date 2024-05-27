@@ -1,4 +1,4 @@
-import { Button, VerticalBox } from "std-widgets.slint";
+import { Button, VerticalBox, LineEdit } from "std-widgets.slint";
 
 export component AppWindow inherits Window 
 {
@@ -15,7 +15,13 @@ export component AppWindow inherits Window
             }
         }
         Row
-        {}
+        {
+            LineEdit 
+            {
+                font-size: 16px;
+                placeholder-text: "Enter your number";
+            }
+        }
         Row
         {}
     }
@@ -24,3 +30,5 @@ export component AppWindow inherits Window
 // creating a grid layout for table like GUI
 // do 3 lines - 3 rows
 // adjust the GUI window - horizontal center alignment, make the font 24, and the font weight 900
+// Adding the text box through line edit with 16 pixels and 16 pixels
+//  
