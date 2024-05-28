@@ -1,8 +1,6 @@
 use slint::SharedString;
 slint::include_modules!();
 
-slint::include_modules!();
-
 const TAXPER: f64 = 0.30;
 const OWNERPER: f64 = 0.55;
 const PROFITPER: f64 = 0.05;
