@@ -3,6 +3,7 @@ import { Button, VerticalBox, LineEdit } from "std-widgets.slint";
 export component AppWindow inherits Window 
 {
     background: #313e50;
+
     GridLayout 
     {
         
@@ -26,6 +27,7 @@ export component AppWindow inherits Window
                 horizontal-alignment: center;
                 font-size: 16px;
                 placeholder-text: "Enter your number";
+                height: 35px;
             }
         }
         Row
@@ -34,6 +36,7 @@ export component AppWindow inherits Window
             {
                 text: "Calculate";
                 primary: true;
+                height: 35px;
             }
         }
     }
