@@ -6,7 +6,7 @@ import { Button, VerticalBox, LineEdit } from "std-widgets.slint";
 export component AppWindow inherits Window 
 {
     callback divide-income(string);
-    property <string> results: "";
+    in property <string> results: "";
     background: #313e50;
 
     GridLayout 
@@ -74,3 +74,4 @@ export component AppWindow inherits Window
 // Adding the result property 
 // making the button pushing call-back
 // Adding the results window with a white color, black text 
+// the whole main update fiasco
