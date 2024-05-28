@@ -1,13 +1,20 @@
 import { Button, VerticalBox, LineEdit } from "std-widgets.slint";
 
+component CalculateButton 
+{Button 
+    {
+        text: "Calculate";
+        primary: true;
+        height: 35px;
+    }
+}
+
 export component AppWindow inherits Window 
 {
     background: #313e50;
 
     GridLayout 
-    {
-        
-        
+    {        
         padding: 50px;
         spacing: 25px;
         Row
@@ -32,12 +39,7 @@ export component AppWindow inherits Window
         }
         Row
         {
-            Button 
-            {
-                text: "Calculate";
-                primary: true;
-                height: 35px;
-            }
+           CalculateButton {} 
         }
     }
 }
@@ -46,5 +48,6 @@ export component AppWindow inherits Window
 // do 3 lines - 3 rows
 // adjust the GUI window - horizontal center alignment, make the font 24, and the font weight 900
 // Adding the text box through line edit with a "enter number" request" with 16 pixels and 16 pixels, horizontal center alignment
-// Adding the button
+// Adding the button and adjusting the colors
 // padding (50) and spacing (25)
+// modeling out the button logic and prototyping it
