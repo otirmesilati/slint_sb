@@ -1,16 +1,12 @@
 import { Button, VerticalBox, LineEdit } from "std-widgets.slint";
 
-component CalculateButton 
-{Button 
-    {
-        text: "Calculate";
-        primary: true;
-        height: 35px;
-    }
-}
+
+
 
 export component AppWindow inherits Window 
 {
+    callback divide-income(string);
+    property <string> results: "";
     background: #313e50;
 
     GridLayout 
@@ -29,7 +25,7 @@ export component AppWindow inherits Window
         }
         Row
         {
-            LineEdit 
+            income := LineEdit 
             {
                 horizontal-alignment: center;
                 font-size: 16px;
@@ -39,10 +35,17 @@ export component AppWindow inherits Window
         }
         Row
         {
-           CalculateButton {} 
+            Button 
+            {
+                text: "Calculate";
+                primary: true;
+                height: 35px;
+                clicked => {divide-income(income.text)}
+            }
         }
     }
 }
+
 
 // creating a grid layout for table like GUI
 // do 3 lines - 3 rows
@@ -51,3 +54,5 @@ export component AppWindow inherits Window
 // Adding the button and adjusting the colors
 // padding (50) and spacing (25)
 // modeling out the button logic and prototyping it
+// Adding the result property 
+// making the button pushing call-back
